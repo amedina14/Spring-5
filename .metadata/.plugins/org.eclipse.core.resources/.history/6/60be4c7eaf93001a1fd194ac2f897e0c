@@ -1,0 +1,31 @@
+package com.bolsadeideas.springboot.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@Configuration
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	/*
+	 * Configuramos nuestro encriptador por defecto: BCryptPasswordEncoder.
+	 * Requerido en spring 2.2.5 (superiores al 2.1.)
+	 * 
+	 * Lo guardamos en el contenedor de spring con Bean.
+	 * 
+	 * Lo instanciamos de una.
+	 */
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
+	@Autowired
+	public void configurerGlobal(AuthenticationManagerBuilder builder) throws Exception{
+		PasswordEncoder encoder = passwordEncoder();
+	}
+}

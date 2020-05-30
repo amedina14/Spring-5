@@ -1,0 +1,11 @@
+package com.bolsadeideas.springboot.app;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+@Configuration
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	/* Configuramos nuestro encriptador por defecto: BCryptPasswordEncoder.
+	 * Requerido en spring 2.2.5 (superiores al 2.1.) */
+}

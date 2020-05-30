@@ -1,0 +1,110 @@
+package com.bolsadeideas.springboot.app.models.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.bolsadeideas.springboot.app.models.dao.IClienteDao;
+import com.bolsadeideas.springboot.app.models.dao.IFacturaDao;
+import com.bolsadeideas.springboot.app.models.dao.IProductoDao;
+import com.bolsadeideas.springboot.app.models.entity.Cliente;
+import com.bolsadeideas.springboot.app.models.entity.Factura;
+import com.bolsadeideas.springboot.app.models.entity.Producto;
+
+@Service
+public class ClienteServiceImpl implements IClienteService {
+
+	@Autowired
+	private IClienteDao clienteDao;
+
+	/* Inyectamos el servicio IProductoDao */
+	@Autowired
+	private IProductoDao productoDao;
+
+	/* Inyectamos el componente IFacturaDao */
+	@Autowired
+	private IFacturaDao facturaDao;
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Cliente> findAll() {
+		return (List<Cliente>) clienteDao.findAll();
+	}
+
+	@Override
+	@Transactional
+	public void save(Cliente cliente) {
+		clienteDao.save(cliente);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Cliente findOne(Long id) {
+		return clienteDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		clienteDao.deleteById(id);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Page<Cliente> findAll(Pageable pageable) {
+		return clienteDao.findAll(pageable);
+	}
+
+	/* Agregamos el metodo de la consulta en la clase Cliente service */
+	@Override
+	@Transactional(readOnly = true)
+	public List<Producto> findByNombre(String term) {
+		return productoDao.findByNombreLikeIgnoreCase("%" + term + "%");
+	}
+
+	/*
+	 * Metodo del objeto facturaDao implementado en ClienteServiceImpl desde la
+	 * interfaz principal IClienteService.
+	 */
+	@Override
+	@Transactional
+	public void saveFactura(Factura factura) {
+		facturaDao.save(factura);
+	}
+
+	/*
+	 * Metodo para buscar el producto por el ID, serà inyectado entre las
+	 * interfaces.
+	 */
+	@Override
+	/*
+	 * Ya que es solo una consulta de tipo Select, solo es de lectura. Porque no
+	 * modifica nada en la DB.
+	 */
+	@Transactional(readOnly = true)
+	public Producto findProductoById(Long id) {
+		/*
+		 * En Spring Boot 2 o superior, findById() retorna un optional para manejar si
+		 * el objeto Entity viene en la consulta.
+		 */
+		return productoDao.findById(id).orElse(null);
+	}
+
+	/*
+	 * Metodo para buscar la factura por el ID gracias al objeto interfaz
+	 * facturaDao. Serà inyectada entre las interfaces al controlador factura.
+	 * 
+	 * .orElse(null) va en caso de que no estè presente el entity en la consulta
+	 * JPA.
+	 */
+	@Override
+	@Transactional(readOnly = true)
+	public Factura findFacturaById(Long id) {
+		return facturaDao.findById(id).orElse(null);
+	}
+
+}

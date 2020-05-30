@@ -1,0 +1,56 @@
+package com.bolsadeideas.springboot.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.User.UserBuilder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@Configuration
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	/*
+	 * Configuramos nuestro encriptador por defecto: BCryptPasswordEncoder.
+	 * Requerido en spring 2.2.5 (superiores al 2.1.)
+	 * 
+	 * Lo guardamos en el contenedor de spring con Bean y queda disponible
+	 * en el contexto de spring security.
+	 * 
+	 * Lo instanciamos de una.
+	 */
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
+	@Autowired
+	public void configurerGlobal(AuthenticationManagerBuilder builder) throws Exception{
+		
+		/* Con PasswordEncoder ahora podemos crear los usuarios y cifrar sus contraseñas.
+		 * Invocamos el metodo. */
+		PasswordEncoder encoder = passwordEncoder();
+		
+		/* Por cada user que se registra, la password se cifra automaticamente. */
+		/*
+		UserBuilder users = User.builder().passwordEncoder(password -> {
+			return encoder.encode(password);
+		});
+		*/
+		
+		/* 
+		 * Llamada estatica, :: obtiene el argumento de la 
+		 * funcion lambda y la encoder y la pasa al metodo encode.
+		 * Forma implicita, alias o simplificacion de Java 8.
+		 */
+		UserBuilder users = User.builder().passwordEncoder(encoder::encode);
+		
+		/* Se crean los usuarios en memoria */
+		builder.inMemoryAuthentication()
+		.withUser(users.username("admin").password("12345").roles("ADMIN","USER"))
+		.withUser(users.username("adrian").password("12345").roles("USER"));
+	}
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	<header th:replace="layout/layout :: header"></header>
+
+	<div class="container py-4">
+
+		<div class="card bg-light">
+			<div class="card-header" th:text="${titulo}"></div>
+			<div class="card-body">
+
+				<h4 class="card-title">
+					<a class="btn btn-light btn-xs"
+						th:href="@{'/ver/' + ${factura.cliente.id}}"
+						th:text="'&laquo; Torna al dettaglio cliente'"></a>
+				</h4>
+
+				<ul class="list-group my-2">
+					<li class="list-group-item list-group-item-primary"
+						th:text="'Dati del cliente'"></li>
+					<li class="list-group-item" th:text="${factura.cliente}"></li>
+					<li class="list-group-item" th:text="${factura.cliente.email}"></li>
+				</ul>
+
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-success"
+						th:text="'Dati dello scontrino'"></li>
+					<li class="list-group-item" th:text="'Folio: ' + ${factura.id}"></li>
+					<li class="list-group-item"
+						th:text="'Descripciòn: ' + ${factura.descripcion}"></li>
+					<li class="list-group-item"
+						th:text="'Fecha creaciòn: ' + ${factura.createAt}"></li>
+				</ul>
+
+				<div class="alert alert-info my-4"
+					th:if="${#lists.isEmpty(factura.items)}"
+					th:text="'No hay lineas en para la factura ' + ${factura.descripcion}">
+				</div>
+
+				<table th:if="${not #lists.isEmpty(factura.items)}"
+					class="table table-striped table-hover table-bordered my-3">
+					<thead>
+						<tr>
+							<th>Prodotto</th>
+							<th>Prezzo</th>
+							<th>Quantità</th>
+							<th>Totale</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="linea: ${factura.items}">
+							<td th:text="${linea.producto.nombre}"></td>
+							<td th:text="${linea.producto.precio}"></td>
+							<td th:text="${linea.cantidad}"></td>
+							<td th:text="${linea.calcularImporte()}"></td>
+						</tr>
+					</tbody>
+				</table>
+				<h5 class="float-right">
+					<!-- El total està calculado en un metodo de la clase entity Factura. -->
+					Gran Total <span class="badge badge-warning my-3"
+						th:text="${factura.total}">0</span>
+				</h5>
+
+				<div class="card border-info mb-4" style="max-width: 20rem;">
+					<div class="card-header">Osservazioni</div>
+					<div class="card-body">
+						<!-- Muestra la observacion si NO es VACIA -->
+						<p class="card-text" th:text="${factura.observacion}"
+							th:if="${not #strings.isEmpty(factura.observacion)}"></p>
+						<!-- Si es VACIA muestra mensaje -->
+						<h4 class="card-title"
+							th:if="${#strings.isEmpty(factura.observacion)}"
+							th:text="'Non ci sono osservazioni'"></h4>
+					</div>
+				</div>
+
+					<a class="btn btn-light btn-xs"
+						th:href="@{'/ver/' + ${factura.cliente.id}}"
+						th:text="'&laquo; Torna al dettaglio cliente'"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
