@@ -1,7 +1,0 @@
-NotEmpty.cliente.nombre=No puede ser vacìo
-NotEmpty.cliente.apellido=No puede ser vacìo
-NotEmpty.cliente.email=No puede ser vacìo
-Email.cliente.email=La direcciòn de correo no es vàlida
-NotNull.cliente.createAt=La fecha no puede ser vacìa
-typeMismatch.cliente.createAt=Formato de la fecha es invàlido, debe ser: yyyy-MM-dd
-NotEmpty.factura.descripcion=La descripcion es requerida!
