@@ -120,7 +120,7 @@ public class FormController {
 		return paises;
 	}
 
-	@GetMapping("/form")
+	@GetMapping({"/form","/"})
 	public String form(Model model) {
 		Usuario usuario = new Usuario();
 		usuario.setNombre("Tommy");
