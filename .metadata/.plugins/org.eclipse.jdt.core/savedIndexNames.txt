@@ -5,7 +5,6 @@ INDEX VERSION 1.131+C:\Users\Utente\Spring5\workspace\.metadata\.plugins\org.ecl
 1376858622.index
 803141398.index
 2360623181.index
-1431099546.index
 3155658316.index
 3122008217.index
 2036787744.index
