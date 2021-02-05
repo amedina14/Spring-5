@@ -12956,3 +12956,39 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 19:59:05.620
 !MESSAGE executing callback sts4.classpath.bYRVxQCS SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:54.165
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpa-crudRepo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:54.166
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:54.167
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:54.167
+!MESSAGE buffering callback sts4.classpath.bYRVxQCS spring-boot-data-jpa-crudRepo false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:54.168
+!MESSAGE executing callback sts4.classpath.bYRVxQCS 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:54.197
+!MESSAGE executing callback sts4.classpath.bYRVxQCS SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:55.011
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpa-crudRepo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:55.012
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:55.022
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:55.027
+!MESSAGE buffering callback sts4.classpath.bYRVxQCS spring-boot-data-jpa-crudRepo false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:55.027
+!MESSAGE executing callback sts4.classpath.bYRVxQCS 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:55.035
+!MESSAGE executing callback sts4.classpath.bYRVxQCS SUCCESS [done]
