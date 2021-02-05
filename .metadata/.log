@@ -12992,3 +12992,42 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:02:55.035
 !MESSAGE executing callback sts4.classpath.bYRVxQCS SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2021-02-05 20:11:44.776
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:12.566
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpa-crudRepo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:12.567
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:12.577
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:12.587
+!MESSAGE buffering callback sts4.classpath.bYRVxQCS spring-boot-data-jpa-crudRepo false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:12.588
+!MESSAGE executing callback sts4.classpath.bYRVxQCS 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:12.612
+!MESSAGE executing callback sts4.classpath.bYRVxQCS SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:49.021
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpa-crudRepo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:49.023
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:49.031
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:49.044
+!MESSAGE buffering callback sts4.classpath.bYRVxQCS spring-boot-data-jpa-crudRepo false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:49.047
+!MESSAGE executing callback sts4.classpath.bYRVxQCS 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-05 20:14:49.089
+!MESSAGE executing callback sts4.classpath.bYRVxQCS SUCCESS [done]
