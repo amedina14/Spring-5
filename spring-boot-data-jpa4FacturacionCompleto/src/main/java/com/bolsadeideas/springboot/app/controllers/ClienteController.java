@@ -99,14 +99,15 @@ public class ClienteController {
 	@RequestMapping(value = {"/listar","/"}, method = RequestMethod.GET)
 	public String listar(@RequestParam(name = "page", defaultValue = "0") int page, Model model) {
 
-		/* Por cada pagina muestra 4 lineas. */
-		Pageable pageRequest = PageRequest.of(page, 4);
+		/* Parametros: Pagina actual que la recive por la url
+		 * y numero de registros por pagina, ej 4. */
+		Pageable pageRequest = PageRequest.of(page, 4); // iteratore
 
-		Page<Cliente> clientes = clienteService.findAll(pageRequest);
+		Page<Cliente> clientes = clienteService.findAll(pageRequest); // pagina come sottolista.
 
 		PageRender<Cliente> pageRender = new PageRender<>("/listar", clientes);
-		model.addAttribute("titulo", "Lista dei clienti INPS (Hackerato)");
-//		model.addAttribute("clientes", clienteService.findAll());
+		model.addAttribute("titulo", "Lista dei clienti (Fino a sezione 12)");
+	    //model.addAttribute("clientes", clienteService.findAll());
 		model.addAttribute("clientes", clientes);
 		model.addAttribute("page", pageRender);
 		return "listar";
@@ -126,7 +127,7 @@ public class ClienteController {
 		Cliente cliente = null;
 
 		if (id > 0) {
-			cliente = clienteService.findOne(id);
+			cliente = clienteService.findOne(id); // equivale a una query che ottiene tutti i campi where id=id;
 			if (cliente == null) {
 				flash.addFlashAttribute("error", "El ID del ciente no exixte en el DB!");
 				return "redirect:/listar";

@@ -33,7 +33,8 @@ public class PageRender<T> {
 		 * paginas
 		 */
 		int desde, hasta;
-		if (totalPaginas <= numElementosPorPagina) {
+		// si el numero de total de paginas es > que los elementos por pagina, el paginador es muy grande
+		if (totalPaginas <= numElementosPorPagina) { 
 			desde = 1;
 			hasta = totalPaginas;
 		} else {

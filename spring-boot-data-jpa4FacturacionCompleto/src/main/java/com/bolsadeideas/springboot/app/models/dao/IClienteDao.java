@@ -17,7 +17,7 @@ public interface IClienteDao extends PagingAndSortingRepository<Cliente, Long> {
 	 * 
 	 * Si se usa la palabra clave fetch en la consulta con el inner join se carga todo
 	 * dentro de la misma consulta, por lo tanto no hay carga perezosa, si es sin
-	 * fetch es con carga perezosa.
+	 * fetch es con carga perezosa (await) y mejora la rapidez.
 	 */
 	@Query("select c from Cliente c left join fetch c.facturas f where c.id=?1 ")
 	public Cliente fetchByIdWithFacturas(Long id);
