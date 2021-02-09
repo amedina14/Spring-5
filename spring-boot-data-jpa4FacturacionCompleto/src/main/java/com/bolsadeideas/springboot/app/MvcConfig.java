@@ -23,9 +23,9 @@ public class MvcConfig implements WebMvcConfigurer{
 		
 		log.info(resourcePath);
 		
-		registry.addResourceHandler("/uploads/**")
+		registry.addResourceHandler("/uploads/**") // registra la risorsa da usare, per visualizzare l'immagine.
 //		.addResourceLocations("file:/C:/Temp/uploads/");
-		.addResourceLocations(resourcePath);
+		.addResourceLocations(resourcePath);  // indica l'ubicazione fisica di quella risorsa.
 		
 	}
 	*/
