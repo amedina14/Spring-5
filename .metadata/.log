@@ -15328,3 +15328,233 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 12:25:46.364
 !MESSAGE executing callback sts4.classpath.gDprhrem SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 14:07:18.512
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gDprhrem
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 14:07:18.513
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.gDprhrem
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 14:07:18.514
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 14:07:18.514
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gDprhrem => OK
+
+!ENTRY org.eclipse.ui 2 2 2021-02-09 14:07:19.519
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2021-02-09 15:56:54.173 -----------------------------------------------
+eclipse.buildId=4.5.0.201912171052-RELEASE
+java.version=11.0.9
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-02-09 15:57:07.822
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-02-09 15:57:07.822
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57ac236a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4542af89,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:16.600
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:16.603
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@7c3bac88[org.springframework.tooling.boot.ls:1.14.0.201912170939(id=631)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:16.611
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:16.700
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-02-09 15:57:19.728
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Utente'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.284
+!MESSAGE Boot LS startup time from start to initialized: 9644ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.436
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.McdQENwRisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.454
+!MESSAGE subscribing to classpath changes: sts4.classpath.McdQENwR isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.459
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.462
+!MESSAGE subsribers = {sts4.classpath.McdQENwR=Send Classpath Notifications(73)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.463
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.464
+!MESSAGE project spring-boot-data-jpa4FacturacionCompleto ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.465
+!MESSAGE project spring-boot-data-jpa-crudRepo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.466
+!MESSAGE project spring-boot-data-jpa-serv-crudrepo-mysql ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.466
+!MESSAGE project spring-boot-data-jpaSpringSecurity ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.467
+!MESSAGE project spring-boot-di ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.467
+!MESSAGE project spring-boot-error ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.468
+!MESSAGE project spring-boot-form ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.469
+!MESSAGE project spring-boot-horario ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.469
+!MESSAGE project spring-boot-web ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.470
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.471
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.McdQENwR => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.475
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpa4FacturacionCompleto
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.476
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.551
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.561
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-data-jpa4FacturacionCompleto false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.562
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpa-crudRepo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.562
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.570
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.578
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-data-jpa-crudRepo false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.578
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpa-serv-crudrepo-mysql
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.579
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.587
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.595
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-data-jpa-serv-crudrepo-mysql false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.596
+!MESSAGE Preparing classpath changed notification spring-boot-data-jpaSpringSecurity
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.597
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.605
+!MESSAGE classpath=109 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.614
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-data-jpaSpringSecurity false 109
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.615
+!MESSAGE Preparing classpath changed notification spring-boot-di
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.616
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.631
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.636
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-di false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.637
+!MESSAGE Preparing classpath changed notification spring-boot-error
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.638
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.651
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.655
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-error false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.656
+!MESSAGE Preparing classpath changed notification spring-boot-form
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.656
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.665
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.669
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-form false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.670
+!MESSAGE Preparing classpath changed notification spring-boot-horario
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.672
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.682
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.686
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-horario false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.687
+!MESSAGE Preparing classpath changed notification spring-boot-web
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.688
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.700
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.703
+!MESSAGE buffering callback sts4.classpath.McdQENwR spring-boot-web false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.704
+!MESSAGE executing callback sts4.classpath.McdQENwR 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-09 15:57:26.889
+!MESSAGE executing callback sts4.classpath.McdQENwR SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2021-02-09 16:07:06.368
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
