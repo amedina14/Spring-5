@@ -184,9 +184,9 @@ public class ClienteController {
 				uploadFileService.delete(cliente.getFoto());
 
 				/*
-				 * // Obtenemos la ruta absoluta de la imagen Path rootPath =
-				 * Paths.get(UPLOADS_FOLDER).resolve(cliente.getFoto()).toAbsolutePath(); File
-				 * archivo = rootPath.toFile();
+				 * // Obtenemos la ruta absoluta de la imagen 
+				 * Path rootPath = Paths.get(UPLOADS_FOLDER).resolve(cliente.getFoto()).toAbsolutePath(); 
+				 * File archivo = rootPath.toFile();
 				 * 
 				 * if (archivo.exists() && archivo.canRead()) { archivo.delete(); }
 				 */
