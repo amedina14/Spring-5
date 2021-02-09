@@ -34,17 +34,17 @@ public class PageRender<T> {
 		 */
 		int desde, hasta;
 		// si el numero de total de paginas es > que los elementos por pagina, el paginador es muy grande
-		if (totalPaginas <= numElementosPorPagina) { 
+		if (totalPaginas <= numElementosPorPagina) { // paginator piccolo, stampato interamente
 			desde = 1;
 			hasta = totalPaginas;
-		} else {
-			if (paginaActual <= numElementosPorPagina / 2) {
+		} else { // paginator per ranghi
+			if (paginaActual <= numElementosPorPagina / 2) { // rango inicial ej. actual 1, de 1 a 10
 				desde = 1;
 				hasta = numElementosPorPagina;
-			} else if (paginaActual >= totalPaginas - numElementosPorPagina / 2) {
-				desde = totalPaginas - numElementosPorPagina + 1;
-				hasta = numElementosPorPagina;
-			} else {
+			} else if (paginaActual >= totalPaginas - numElementosPorPagina / 2) { // rango final ej. actual 16, de 16 a 25
+				desde = totalPaginas - numElementosPorPagina + 1; // ej. 25 - 10 + 1 = 15 + 1 = 16
+				hasta = numElementosPorPagina; // 10 => 16 a 25
+			} else { // rango intermedio, ej. actual 7, de 2 a 11 
 				desde = paginaActual - numElementosPorPagina / 2;
 				hasta = numElementosPorPagina;
 			}
@@ -52,7 +52,7 @@ public class PageRender<T> {
 
 		// Se agregan los items: paginas que se muestran en la vista
 		for (int i = 0; i < hasta; i++) {
-			paginas.add(new PageItem(desde + i, paginaActual == desde + i));
+			paginas.add(new PageItem(desde + i, paginaActual == desde + i)); //ej. act. 20 = 16(desde) + 4(i)
 		}
 
 	}
