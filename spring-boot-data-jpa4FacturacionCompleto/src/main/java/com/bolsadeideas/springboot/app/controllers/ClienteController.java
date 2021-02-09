@@ -54,9 +54,11 @@ public class ClienteController {
 	private IUploadFileService uploadFileService;
 
 	/*
-	 * Se pasa el nombre del archivo de la imagen como argumento. Desde la ver.html
-	 * en <img>. El .+ es para que acepte la extencion del file y no hacer
-	 * distincion.
+	 * Se pasa el nombre del archivo de la imagen como argumento. 
+	 * El .+ es una regular expression que acepta la extencion del file y no la trunca en el argumento.
+	 * Desde la ver.html en <img>.  
+	 * No hace distincion de extension.
+	 * <Resource> Interface che rappresenta una qualsiasi risorsa dell'app, come un'img, file, ecc.
 	 */
 	@GetMapping(value = "/uploads/{filename:.+}")
 	public ResponseEntity<Resource> verFoto(@PathVariable String filename) {
@@ -154,6 +156,7 @@ public class ClienteController {
 			flash.addFlashAttribute("success", "Cliente eliminado con éxito!");
 
 			/*
+			 * // Eliminiamo l'immagine, indipendentemente quando si elimina un utente, così che non rimanga orfana.
 			 * // Obtenemos la ruta absoluta de la imagen Path rootPath =
 			 * Paths.get(UPLOADS_FOLDER).resolve(cliente.getFoto()).toAbsolutePath(); File
 			 * archivo = rootPath.toFile();
@@ -184,6 +187,7 @@ public class ClienteController {
 				uploadFileService.delete(cliente.getFoto());
 
 				/*
+				 * // Eliminiamo l'immagine precedente, quando si modifica l'immagine di un utente, così che non rimanga orfana.
 				 * // Obtenemos la ruta absoluta de la imagen 
 				 * Path rootPath = Paths.get(UPLOADS_FOLDER).resolve(cliente.getFoto()).toAbsolutePath(); 
 				 * File archivo = rootPath.toFile();
