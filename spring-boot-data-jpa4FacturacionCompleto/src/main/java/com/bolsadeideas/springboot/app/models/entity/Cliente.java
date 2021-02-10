@@ -59,7 +59,10 @@ public class Cliente implements Serializable {
 	 * ejecucion.
 	 * 
 	 * CascadeType.All: Vincula los registros padres a los hijos con integridad
-	 * referencial. Elimina padre = elimina hijo.
+	 * referencial. Persist si realizza in cadena, quando il cliente riceve/salva varie fatture 
+	 * ed il cliente si persiste, automaticamente persiste anche le fatture.
+	 * Oppure: Elimina padre = elimina hijo.
+	 * Atomicità.
 	 */
 	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Factura> facturas;
@@ -68,7 +71,7 @@ public class Cliente implements Serializable {
 
 	/* METODOS */
 
-	public Cliente() {
+	public Cliente() { // Costruttore
 		facturas = new ArrayList<Factura>();
 	}
 
@@ -129,11 +132,13 @@ public class Cliente implements Serializable {
 	public List<Factura> getFacturas() {
 		return facturas;
 	}
-
+	
+	// Salva una lista di fatture, le salva tutte
 	public void setFacturas(List<Factura> facturas) {
 		this.facturas = facturas;
 	}
-
+	
+	// Salva una fattura per una
 	public void addFactura(Factura factura) {
 		facturas.add(factura);
 	}
