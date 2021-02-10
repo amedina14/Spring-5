@@ -41,7 +41,7 @@ public class Factura implements Serializable {
 	private Date createAt;
 
 	/* MUCHAS facturas tienen UN cliente */
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY) //Ottien il cliente della fattura solo quando è richiesto. Lazy: migliora prestazioni.
 	private Cliente cliente;
 
 	/* UNA factura tiene MUCHOS items */
@@ -80,6 +80,8 @@ public class Factura implements Serializable {
 		this.total = total;
 	}
 */
+	
+	// Aggiunge la data della fattura automaticamente prima della persistenza
 	@PrePersist
 	public void prePersist() {
 		createAt = new Date();
